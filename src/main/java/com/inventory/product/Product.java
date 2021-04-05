@@ -6,15 +6,16 @@ import javax.persistence.*;
 @Table
 public class Product {
     @Id
-    @SequenceGenerator(
-            name="product-sequence",
-            sequenceName = "product_sequence",
-            allocationSize = 1
-    )
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator = "product_sequence"
-    )
+//    @SequenceGenerator(
+//            name="product-sequence",
+//            sequenceName = "product_sequence",
+//            allocationSize = 1
+//    )
+//    @GeneratedValue(
+//            strategy = GenerationType.SEQUENCE,
+//            generator = "product_sequence"
+//    )
+    @GeneratedValue
     private Long id;
     private String name;
     private String brand;
@@ -24,13 +25,13 @@ public class Product {
     public Product() {
     }
 
-    public Product(Long id, String name, String brand, String origin, Integer price) {
-        this.id = id;
-        this.name = name;
-        this.brand = brand;
-        this.origin = origin;
-        this.price = price;
-    }
+//    public Product(Long id, String name, String brand, String origin, Integer price) {
+//        this.id = id;
+//        this.name = name;
+//        this.brand = brand;
+//        this.origin = origin;
+//        this.price = price;
+//    }
 
     public Product(String name, String brand, String origin, Integer price) {
         this.name = name;
